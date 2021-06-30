@@ -100,7 +100,7 @@
                     <div class="col-11 col-md-8 text-vertical-align">
                         <p class="articleText"><?= $articles[$randomArticle]->item[$i]->title; ?></p>
                     </div>
-                    <div class="col-6 col-lg-1 articleText text-center">
+                    <div class="col-6 col-lg-1 articleText text-lg-center">
                         <button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-target="#modalArticle<?= $i ?>">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-zoom-in" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
