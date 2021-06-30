@@ -4,7 +4,7 @@ $emploiXML = simplexml_load_file('https://www.lemonde.fr/emploi/rss_full.xml');
 $entrepriseXML = simplexml_load_file('https://www.lemonde.fr/entreprises/rss_full.xml');
 $industrieXML = simplexml_load_file('https://www.lemonde.fr/industrie/rss_full.xml');
 $economieFrancaiseXML = simplexml_load_file('https://www.lemonde.fr/economie-francaise/rss_full.xml');
-$economieXML = simplexml_load_file('https://www.lemonde.fr/economie/rss_full.xml'); 
+$economieXML = simplexml_load_file('https://www.lemonde.fr/economie/rss_full.xml');
 
 
 $emploi = $emploiXML->channel;
@@ -19,5 +19,6 @@ $industrieImg = $industrie->item[0]->children('media', true)->content->attribute
 $economieFrancaiseImg = $economieFrancaise->item[0]->children('media', true)->content->attributes();
 $economieImg = $economie->item[0]->children('media', true)->content->attributes();
 
-$articles = array( 0 => $emploi, $entreprise, $industrie, $economieFrancaise, $economie);
-$randomArticle = rand(0,4);
+$articles = array(0 => $emploi, $entreprise, $industrie, $economieFrancaise, $economie);
+$randomArticle = rand(0, 4);
+

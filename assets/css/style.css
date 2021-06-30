@@ -1,5 +1,17 @@
 .square {
-    min-width: 3em;
-    min-height: 3em;
+    width: 3em;
+    height: 3em;
     margin: 0.5em;
+}
+
+.text-vertical-align {
+    vertical-align: middle;
+    font-size: 1em;
+}
+.articleText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    line-height: 4em;
 }

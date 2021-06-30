@@ -1,4 +1,4 @@
-<?php require 'controllers/index-controller.php';?>
+<?php require 'controllers/index-controller.php'; ?>
 <!doctype html>
 <html lang="fr">
 
@@ -70,25 +70,44 @@
             </button>
         </div>
         <div>
-        <?php 
-            for ($i=0; $i < 12; $i++) { 
-                $randomArticle = rand(0,4);
-        ?>
-            <div class="d-flex flex-row justify-content-between border mt-5 p-3">
-                <div class="square"></div>
-                <div>
-                    <p><?= $articles[$randomArticle]->item[$i]->title; ?></p>
+            <?php
+            for ($i = 0; $i < 12; $i++) {
+                $randomArticle = rand(0, 4);
+            ?>
+                <div class="d-flex flex-row justify-content-between border my-3 p-3 row">
+                    <div class=" col-1 square <?php switch ($randomArticle) {
+                                            case 0:
+                                                echo "bg-primary";
+                                                break;
+                                            case 1:
+                                                echo "bg-success";
+                                                break;
+                                            case 2:
+                                                echo "bg-danger";
+                                                break;
+                                            case 3:
+                                                echo "bg-info";
+                                                break;
+                                            case 4:
+                                                echo "bg-dark";
+                                                break;
+                                            default:
+                                                echo "bg-secondary";
+                                                break;
+                                        } ?>"></div>
+                    <div class="col-8 text-vertical-align">
+                        <p class="articleText"><?= $articles[$randomArticle]->item[$i]->title; ?></p>
+                    </div>
+                    <div class="col-1 articleText">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Zoom
+                        </button>
+                    </div>
+                    <div class="col-2 text-vertical-align text-center">
+                        <a class="articleText" href="<?= $articles[$randomArticle]->item[$i]->link; ?>">Lien vers l'article</a>
+                    </div>
                 </div>
-                <div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
-                    </button>
-                </div>
-                <div>
-                <a href="<?=$articles[$randomArticle]->item[$i]->link;?>">Lien</a>
-                </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
         </div>
     </div>
 
