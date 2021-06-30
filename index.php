@@ -73,33 +73,34 @@
             <?php
             for ($i = 0; $i < 12; $i++) {
                 $randomArticle = rand(0, 4);
+                $date = $articles[$randomArticle]->item[$i]->pubDate;
             ?>
                 <div class="d-flex flex-row justify-content-between border my-3 p-3 row">
                     <div class=" col-1 square <?php switch ($randomArticle) {
-                                            case 0:
-                                                echo "bg-primary";
-                                                break;
-                                            case 1:
-                                                echo "bg-success";
-                                                break;
-                                            case 2:
-                                                echo "bg-danger";
-                                                break;
-                                            case 3:
-                                                echo "bg-info";
-                                                break;
-                                            case 4:
-                                                echo "bg-dark";
-                                                break;
-                                            default:
-                                                echo "bg-secondary";
-                                                break;
-                                        } ?>"></div>
+                                                    case 0:
+                                                        echo "bg-primary";
+                                                        break;
+                                                    case 1:
+                                                        echo "bg-success";
+                                                        break;
+                                                    case 2:
+                                                        echo "bg-danger";
+                                                        break;
+                                                    case 3:
+                                                        echo "bg-info";
+                                                        break;
+                                                    case 4:
+                                                        echo "bg-dark";
+                                                        break;
+                                                    default:
+                                                        echo "bg-secondary";
+                                                        break;
+                                                } ?>"></div>
                     <div class="col-8 text-vertical-align">
                         <p class="articleText"><?= $articles[$randomArticle]->item[$i]->title; ?></p>
                     </div>
                     <div class="col-1 articleText">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArticle<?=$i?>">
                             Zoom
                         </button>
                     </div>
@@ -107,10 +108,29 @@
                         <a class="articleText" href="<?= $articles[$randomArticle]->item[$i]->link; ?>">Lien vers l'article</a>
                     </div>
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modalArticle<?=$i?>" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header d-flex flex-column">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <p><?=date( "D, d F Y H:m:s", strtotime($date));?></p>
+                                <p class="modal-title h5" id="exampleModalLabel"><?=$articles[$randomArticle]->item[$i]->title;?></p>
+                            </div>
+                            <div class="modal-body">
+                                <img class="w-100 my-3" src="<?=$articles[$randomArticle]->item[$i]->children('media', true)->content->attributes();?>" alt="">
+                                <p><?=$articles[$randomArticle]->item[$i]->description;?></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="<?=$articles[$randomArticle]->item[$i]->link;?>"><button type="button" class="btn btn-primary">Aller ver l'article</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 
