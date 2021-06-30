@@ -22,4 +22,3 @@ $economieImg = $economie->item[0]->children('media', true)->content->attributes(
 
 $articles = array(0 => $emploi, $entreprise, $industrie, $economieFrancaise, $economie);
 $randomArticle = rand(0, 4);
-

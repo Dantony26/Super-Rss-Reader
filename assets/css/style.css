@@ -1,3 +1,7 @@
+.darkMode {
+    color: #fff;
+    background-color: #37383F;
+}
 .bg-carousel {
     background-color: rgba(0, 0, 0, 0.3);
 }
