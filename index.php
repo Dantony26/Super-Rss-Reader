@@ -1,7 +1,3 @@
-<?php
-$url = 'https://www.01net.com/rss/actualites/jeux/';
-$xml = simplexml_load_file($url);
-?>
 <!doctype html>
 <html lang="fr">
 
@@ -13,14 +9,53 @@ $xml = simplexml_load_file($url);
 </head>
 
 <body>
-    <?php
-    foreach ($xml->channel->item as $item) {
-        echo $item->title;
-        echo $item->link;
-        echo $item->description;
-        echo date('D, d M Y',strtotime($item->pubDate));
-    }
-    ?>
+    <p class="h1 text-center">Super RSS Reader</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="container-fluid d-flex flex-row">
+                <a class="navbar-brand" href="#">Accueil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">sujet1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">sujet2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">sujet2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
