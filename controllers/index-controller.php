@@ -1,4 +1,5 @@
 <?php
+setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
 
 $emploiXML = simplexml_load_file('https://www.lemonde.fr/emploi/rss_full.xml');
 $entrepriseXML = simplexml_load_file('https://www.lemonde.fr/entreprises/rss_full.xml');

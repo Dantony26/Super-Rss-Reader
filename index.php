@@ -115,7 +115,7 @@
                         <div class="modal-content">
                             <div class="modal-header d-flex flex-column">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                <p><?=date( "D, d F Y H:m:s", strtotime($date));?></p>
+                                <p> <?=strftime("%A %d %B %Y %H:%M:%S", strtotime($date));?></p>
                                 <p class="modal-title h5" id="exampleModalLabel"><?=$articles[$randomArticle]->item[$i]->title;?></p>
                             </div>
                             <div class="modal-body">
