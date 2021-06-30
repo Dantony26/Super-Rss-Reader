@@ -5,8 +5,8 @@ ErrorDocument 404 /404.php
 
 RewriteRule ^accueil$  index.php 
 RewriteRule ^parametre$  parameters.php 
-RewriteRule ^sujet1$  pages.php?sujet=1
-RewriteRule ^sujet2$  pages.php?sujet=2
-RewriteRule ^sujet3$  pages.php?sujet=3
-RewriteRule ^sujet4$  pages.php?sujet=4
-RewriteRule ^sujet5$  pages.php?sujet=5 [L]
+RewriteRule ^sujet1$  views/pages.php?sujet=1
+RewriteRule ^sujet2$  views/pages.php?sujet=2
+RewriteRule ^sujet3$  views/pages.php?sujet=3
+RewriteRule ^sujet4$  views/pages.php?sujet=4
+RewriteRule ^sujet5$  views/pages.php?sujet=5 [L]
