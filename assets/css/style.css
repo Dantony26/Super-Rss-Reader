@@ -1,10 +1,12 @@
+.bg-carousel {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 .square {
     width: 3em;
     height: 3em;
     margin: 0.5em;
     border-radius: 5px;
 }
-
 .text-vertical-align {
     vertical-align: middle;
     font-size: 1em;
@@ -15,4 +17,16 @@
     text-overflow: ellipsis;
     margin-bottom: 0;
     line-height: 4em;
+}
+.btn-bg {
+    background-color: rgb(208, 209, 209);
+}
+@media screen and (max-width: 767px) {
+    .square {
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .articleText {
+        line-height: 2.5em;
+    }
 }
