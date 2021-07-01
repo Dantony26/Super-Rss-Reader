@@ -11,7 +11,7 @@
 </head>
 
 <body class="<?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : ""; ?>">
-    <a class="text-decoration-none <?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : 'text-black'; ?>" href="accueil">
+    <a class="text-decoration-none <?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : 'text-dark'; ?>" href="accueil">
         <p class="h1 text-center my-5">Super RSS Reader</p>
     </a>
     <?php include 'includes/navbar.php'; ?>
