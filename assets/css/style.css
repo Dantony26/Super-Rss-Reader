@@ -30,6 +30,9 @@
 .btn-bg {
     background-color: rgb(208, 209, 209);
 }
+.btn-bg:hover {
+    background-color: rgb(158, 158, 158);
+}
 .text-color {
     color: rgba(0,0,0,.55);
 }
