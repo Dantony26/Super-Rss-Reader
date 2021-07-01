@@ -46,7 +46,7 @@ if (isset($_POST['mode'])) {
             <?php  $x++;} ?>
         </div>
         <div class="mb-3">
-            <p>Choississez les articles que vous souhaitez voir :</p>
+            <p>Choississez 3 articles de votre choix :</p>
             <?php
             foreach ($articlesChoices as $item) {
             ?>
