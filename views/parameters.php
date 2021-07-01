@@ -1,6 +1,7 @@
 <?php
 include 'includes/header.php';
 require '../controllers/index-controller.php';
+require '../controllers/parameters-controller.php';
 if (isset($_POST['mode']) && isset($_POST['numberOfArticles']) && isset($_POST['articles']) && in_array($_POST['mode'], $modeChoices) && in_array($_POST['numberOfArticles'], $articlesNumberChoices)) {
     $articleLsist = implode(" ", $_POST['articles']);
     setcookie('mode', htmlspecialchars(trim($_POST['mode'])), time() + 3600 * 24 *7);
