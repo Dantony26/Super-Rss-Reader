@@ -1,10 +1,10 @@
 RewriteEngine on
 
 #redirection erreur 404
-ErrorDocument 404 /404.php
+ErrorDocument 404 /RSS/404.php
 
 RewriteRule ^accueil$  index.php 
-RewriteRule ^parametre$  views/parameters.php 
+RewriteRule ^parametres$  views/parameters.php 
 RewriteRule ^sujet1$  views/pages.php?sujet=1
 RewriteRule ^sujet2$  views/pages.php?sujet=2
 RewriteRule ^sujet3$  views/pages.php?sujet=3
