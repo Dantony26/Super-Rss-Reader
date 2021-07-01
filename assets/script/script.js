@@ -7,8 +7,10 @@ for (var i = 0; i < checkBoxGroup.length; i++) {
             checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
         }
         if (checkedcount > limit) {
-            alert("Vous ne pouvez cochez que " + limit + " cases.");
+            document.getElementById('tooMuchArticles').innerHTML= "Vous ne pouvez cochez que " + limit + " cases.";
             this.checked = false;
+        } else if(checkedcount <= limit) {
+            document.getElementById('tooMuchArticles').innerHTML= "";
         }
     }
 }
