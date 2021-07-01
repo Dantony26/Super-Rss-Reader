@@ -3,18 +3,18 @@ include 'includes/header.php';
 require '../controllers/index-controller.php';
 require '../controllers/parameters-controller.php';
 if (isset($_POST['mode']) && isset($_POST['numberOfArticles']) && in_array($_POST['mode'], $modeChoices) && in_array($_POST['numberOfArticles'], $articlesNumberChoices)) {
-    setcookie('mode', htmlspecialchars(trim($_POST['mode'])), time() + 60);
+    setcookie('mode', htmlspecialchars(trim($_POST['mode'])), time() + 3600 * 24 *7);
     setcookie('numberOfArticles', htmlspecialchars(trim($_POST['numberOfArticles'])), time() + 60);
 }
 
 if (isset($_POST['mode'])) {
-    header("Location: parametre");
+    header("Location: parametres");
     exit;
 }
 ?>
 
 <div class="container my-5">
-    <form action="parametre" method="POST">
+    <form action="parametres" name="form" method="POST">
         <div class="mb-3">
             <p>A vous de voir si vous tenez a vos yeux ...</p>
             <div class="form-check">
@@ -48,7 +48,7 @@ if (isset($_POST['mode'])) {
             foreach ($articlesChoices as $item) {
             ?>
                 <div class="form-check form-check-inline mb-3">
-                    <input class="form-check-input" type="checkbox" id="<?= $item ?>" value="<?= $item ?>">
+                    <input class="form-check-input"  name="articles" type="checkbox" id="<?= $item ?>" value="<?= $item ?>">
                     <label class="form-check-label" for="<?= $item ?>"><?= $item ?></label>
                 </div>
             <?php } ?>
@@ -61,3 +61,4 @@ if (isset($_POST['mode'])) {
 
 
 <?php include 'includes/footer.php'; ?>
+<script src="assets/script/script.js"></script>
