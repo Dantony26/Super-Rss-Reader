@@ -58,7 +58,7 @@ require 'controllers/index-controller.php';
                     $randomArticle = rand(0, 4);
                     $date = $articles[$randomArticle]->item[$i]->pubDate;
             ?>
-                    <div class="d-flex flex-row justify-content-between border my-3 p-3 row gx-0">
+                    <div class="d-flex flex-row justify-content-between border rounded changeColor my-3 p-3 row gx-0">
                         <div class="col-1 square <?php switch ($randomArticle) {
                                                         case 0:
                                                             echo "bg-primary";
