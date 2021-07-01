@@ -1,6 +1,11 @@
-.darkMode {
+.darkMode, .darkMode:hover {
     color: #fff;
     background-color: #37383F;
+}
+
+.lightMode, .lightMode:hover {
+    color: #000;
+    background-color: #fff;
 }
 .bg-carousel {
     background-color: rgba(0, 0, 0, 0.3);
