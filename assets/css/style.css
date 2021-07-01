@@ -25,6 +25,9 @@
 .btn-bg {
     background-color: rgb(208, 209, 209);
 }
+.text-color {
+    color: rgba(0,0,0,.55);
+}
 @media screen and (max-width: 767px) {
     .square {
         width: 1.5em;

@@ -12,18 +12,4 @@
 
 <body class="<?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : ""; ?>">
     <p class="h1 text-center my-5">Super RSS Reader</p>
-    <nav class="navbar navbar-expand-lg <?= isset($_COOKIE['mode']) ? 'navbar-light bg-light' : 'navbar-dark bg-dark'; ?>">
-        <div class="container">
-            <div class="container-fluid d-flex flex-row">
-                <a class="navbar-brand" href="accueil">Accueil</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <?php include 'includes/navbar.php'; ?>
-                    <ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include 'includes/navbar.php'; ?>
