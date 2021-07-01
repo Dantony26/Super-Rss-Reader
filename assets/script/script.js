@@ -1,4 +1,4 @@
-var checkBoxGroup = document.forms['form']['articles'];
+var checkBoxGroup = document.forms['form']['articles[]'];
 var limit = 3
 for (var i = 0; i < checkBoxGroup.length; i++) {
     checkBoxGroup[i].onclick = function () {
