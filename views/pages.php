@@ -1,6 +1,7 @@
 <?php include 'includes/header.php';
 require '../controllers/pages-controller.php';
 require '../controllers/parameters-controller.php';
+setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
 ?>
 
 <div class="container"><?php
@@ -12,7 +13,7 @@ foreach($categories[$_GET['sujet']]->channel->item as $item) {
     <div class="col-7 col-md-7 text-vertical-align ps-4 pe-4">
     <?php echo $item->title;?>
     <p class="fw-normal pt-3"><?= $item->description; ?></p>
-    <p class="fw-normal pt-3"><?= date('D, d M Y',strtotime($item->pubDate)); ?></p>
+    <p class="fw-normal pt-3"><?= strftime("%A %d %B %Y %H:%M:%S", strtotime($item->pubDate)); ?></p>
     <div><a href="<?= $item->link; ?>"><button type="button" class="btn btn-primary">Aller ver l'article</button></a></div>
     </div>
     </div>
