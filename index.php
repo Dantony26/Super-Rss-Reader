@@ -1,5 +1,7 @@
-<?php require 'controllers/index-controller.php';
-include 'views/includes/header.php' ?>
+<?php  
+require 'controllers/parameters-controller.php';
+require 'controllers/index-controller.php';
+ ?>
 <!doctype html>
 <html lang="fr">
 
@@ -8,10 +10,27 @@ include 'views/includes/header.php' ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
     <title>Document</title>
 </head>
 
+<body class="<?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : ""; ?>">
+    <p class="h1 text-center my-5">Super RSS Reader</p>
+    <nav class="navbar navbar-expand-lg <?= isset($_COOKIE['mode']) ? 'navbar-light bg-light' : 'navbar-dark bg-dark'; ?>">
+        <div class="container">
+            <div class="container-fluid d-flex flex-row">
+                <a class="navbar-brand" href="accueil">Accueil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">     
+                        <?php include 'views/includes/navbar.php'; ?>                   
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="container my-5">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

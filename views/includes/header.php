@@ -10,9 +10,9 @@
     <title>Document</title>
 </head>
 
-<body class="<?= isset($_COOKIE['mode'])? $_COOKIE['mode']: ""; ?>">
+<body class="<?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : ""; ?>">
     <p class="h1 text-center my-5">Super RSS Reader</p>
-    <nav class="navbar navbar-expand-lg <?= isset($_COOKIE['mode'])? 'navbar-light bg-light': 'navbar-dark bg-dark'; ?>">
+    <nav class="navbar navbar-expand-lg <?= isset($_COOKIE['mode']) ? 'navbar-light bg-light' : 'navbar-dark bg-dark'; ?>">
         <div class="container">
             <div class="container-fluid d-flex flex-row">
                 <a class="navbar-brand" href="accueil">Accueil</a>
@@ -21,22 +21,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="sujet1">sujet1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sujet2">sujet2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sujet3">sujet3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sujet4">sujet4</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sujet5">sujet5</a>
-                        </li>
-                    </ul>
+                        <?php include 'includes/navbar.php'; ?>
+                    <ul>
                 </div>
             </div>
         </div>
