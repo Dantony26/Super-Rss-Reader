@@ -1,5 +1,6 @@
 <?php include 'includes/header.php';
 require '../controllers/pages-controller.php';
+require '../controllers/parameters-controller.php';
 ?>
 
 <div class="container"><?php
