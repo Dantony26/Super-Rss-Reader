@@ -75,7 +75,7 @@ require 'controllers/index-controller.php';
                                                             echo "bg-info";
                                                             break;
                                                         case 4:
-                                                            echo "bg-dark";
+                                                            echo "bg-warning";
                                                             break;
                                                         default:
                                                             echo "bg-secondary";
