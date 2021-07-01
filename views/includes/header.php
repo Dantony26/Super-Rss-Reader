@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg <?= isset($_COOKIE['mode'])? 'navbar-light bg-light': 'navbar-dark bg-dark'; ?>">
         <div class="container">
             <div class="container-fluid d-flex flex-row">
-                <a class="navbar-brand" href="/RSS">Accueil</a>
+                <a class="navbar-brand" href="accueil">Accueil</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
