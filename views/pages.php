@@ -14,7 +14,7 @@ foreach($categories[$_GET['sujet']]->channel->item as $item) {
     <?php echo $item->title;?>
     <p class="fw-normal pt-3"><?= $item->description; ?></p>
     <p class="fw-normal pt-3"><?= strftime("%A %d %B %Y %H:%M:%S", strtotime($item->pubDate)); ?></p>
-    <div><a href="<?= $item->link; ?>"><button type="button" class="btn btn-primary">Aller ver l'article</button></a></div>
+    <div><a href="<?= $item->link; ?>"><button type="button" class="btn btn-dark btnPage">Aller vers l'article</button></a></div>
     </div>
     </div>
     <?php

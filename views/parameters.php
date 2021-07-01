@@ -58,7 +58,7 @@ if (isset($_POST['mode'])) {
             <p class="text-warning" id="tooMuchArticles"></p>
         </div>
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Valider</button>
+            <button type="submit" class="btn btn-primary btnPage">Valider</button>
         </div>
     </form>
 </div>

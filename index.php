@@ -94,7 +94,7 @@ require 'controllers/index-controller.php';
                             </button>
                         </div>
                         <div class="col-6 col-lg-2 text-vertical-align text-center">
-                            <a class="articleText text-decoration-none" href="<?= $articles[$randomArticle]->item[$i]->link; ?>">Lien vers l'article</a>
+                            <a class="articleText articleLink text-decoration-none" href="<?= $articles[$randomArticle]->item[$i]->link; ?>">Lien vers l'article</a>
                         </div>
                     </div>
                     <!-- Modal -->
@@ -112,7 +112,7 @@ require 'controllers/index-controller.php';
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                    <a href="<?= $articles[$randomArticle]->item[$i]->link; ?>"><button type="button" class="btn btn-primary">Aller ver l'article</button></a>
+                                    <a href="<?= $articles[$randomArticle]->item[$i]->link; ?>"><button type="button" class="btn btn-primary btnModal">Aller vers l'article</button></a>
                                 </div>
                             </div>
                         </div>

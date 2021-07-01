@@ -27,11 +27,55 @@
     margin-bottom: 0;
     line-height: 4em;
 }
+
+.articleLink {
+    color: black;
+}
+.articleLink:hover {
+    color: rgb(92, 92, 92);
+}
+
+.darkMode .articleLink {
+    color: white;
+}
+.darkMode .articleLink:hover {
+    color: rgb(92, 92, 92);
+}
+
+.btnModal {
+    background-color: black;
+    color: white;
+    border: black solid 1px!important;
+}
+
+.darkMode .btnModal {
+    background-color: white;
+    color: black;
+    border: black solid 1px!important;
+}
+
+.darkMode .btnModal:hover {
+    background-color: black;
+    color: white;
+    border: white solid 1px!important;
+}
+
+.btnModal:hover {
+    background-color: white;
+    color: black;
+    border: black solid 1px!important;
+}
+
 .btn-bg {
     background-color: rgb(208, 209, 209);
 }
 .text-color {
     color: rgba(0,0,0,.55);
+}
+
+.darkMode .modal-content {
+background-color: #292a2f;
+color: white;
 }
 
 .changeColor {
@@ -51,6 +95,31 @@
     border-radius: 10px;
     border: 1px solid rgb(48, 48, 48) !important;
 }
+.btnPage{
+    background-color: black;
+    color: white;
+    border: 1px black solid !important;
+}
+
+.btnPage:hover{
+    background-color: white;
+    color: black;
+}
+
+.btnPage .darkMode:hover{
+    background-color: white;
+    color: black;
+}
+
+.form-check-input {
+    border-color: black !important;
+    background-color: white;
+}
+
+.form-check-input:checked {
+    background-color: black !important;
+}
+
 @media screen and (max-width: 767px) {
     .square {
         width: 1.5em;
