@@ -13,7 +13,7 @@
     <?php
     $rows = @file($url);
     if ($rows === false) { ?>
-    <p class="error404Text w-100 text-center">Alors comme ca on tappe des trucs au pif dans l'url ?</p>
+    <p class="error404Text w-100 text-center">Alors comme ca on tape des trucs au pif dans l'url ?</p>
     <?php } ?>
     
     </div>
