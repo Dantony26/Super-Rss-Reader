@@ -3,7 +3,7 @@ include 'includes/header.php';
 require '../controllers/index-controller.php';
 require '../controllers/parameters-controller.php';
 
-if (isset($_POST['mode']) && isset($_POST['numberOfArticles']) && isset($_POST['articles']) && in_array($_POST['mode'], $modeChoices) && in_array($_POST['numberOfArticles'], $articlesNumberChoices)) {
+if (isset($_POST['mode']) && isset($_POST['numberOfArticles']) && isset($_POST['articles']) && in_array($_POST['mode'], $modeChoices) && in_array($_POST['numberOfArticles'], $articlesNumberChoices) && empty(array_diff($_POST['articles'],$articlesChoices))) {
     $articleList = implode(" ", $_POST['articles']);
     setcookie('mode', htmlspecialchars(trim($_POST['mode'])), time() + 3600 * 24 *7);
     setcookie('numberOfArticles', htmlspecialchars(trim($_POST['numberOfArticles'])), time() + 3600 * 24 *7);
