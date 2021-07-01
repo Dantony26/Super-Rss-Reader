@@ -3,8 +3,8 @@ include 'includes/header.php';
 require '../controllers/index-controller.php';
 require '../controllers/parameters-controller.php';
 if (isset($_POST['mode']) && isset($_POST['numberOfArticles'])) {
-    setcookie('mode', $_POST['mode'], time()+60);
-    setcookie('numberOfArticles', $_POST['numberOfArticles'], time()+60);
+    setcookie('mode', htmlspecialchars(trim($_POST['mode'])), time()+60);
+    setcookie('numberOfArticles', htmlspecialchars(trim($_POST['numberOfArticles'])), time()+60);
 }
 
 if(isset($_POST['mode'])){
