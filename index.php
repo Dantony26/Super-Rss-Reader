@@ -1,4 +1,5 @@
-<?php require 'controllers/index-controller.php'; ?>
+<?php require 'controllers/index-controller.php';
+include 'views/includes/header.php' ?>
 <!doctype html>
 <html lang="fr">
 
@@ -11,31 +12,6 @@
     <title>Document</title>
 </head>
 
-<body class="<?= isset($_COOKIE['mode'])? $_COOKIE['mode']: ""; ?>">
-    <p class="h1 text-center my-5">Super RSS Reader</p>
-    <nav class="navbar navbar-expand-lg <?= isset($_COOKIE['mode'])? 'navbar-light bg-light': 'navbar-dark bg-dark'; ?>">
-        <div class="container">
-            <div class="container-fluid d-flex flex-row">
-                <a class="navbar-brand" href="accueil">Accueil</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="sujet1">sujet1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">sujet2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">sujet3</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
     <div class="container my-5">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
