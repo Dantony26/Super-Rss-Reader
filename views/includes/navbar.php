@@ -1,4 +1,5 @@
 <?php
+$articlesChoices = array('Emploi', 'Entreprise', 'Industrie', 'Economie-Francaise', 'Economie');
 if (isset($_COOKIE['articles'])) {
     $articlesNav = explode(" ", $_COOKIE['articles']);
     foreach ($articlesNav as $key => $value) { ?>
@@ -7,7 +8,7 @@ if (isset($_COOKIE['articles'])) {
         </li>
     <?php } ?>
     <li class="nav-item">
-        <a class="nav-link" href="parameters">Paramètres</a>
+        <a class="nav-link" href="parametres">Paramètres</a>
     </li>
     <?php
 } else {
@@ -17,6 +18,6 @@ if (isset($_COOKIE['articles'])) {
         </li>
 <?php } ?>
     <li class="nav-item">
-        <a class="nav-link" href="parameters">Paramètres</a>
+        <a class="nav-link" href="parametres">Paramètres</a>
     </li>
 <?php } ?>
