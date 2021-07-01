@@ -15,7 +15,9 @@ require 'controllers/index-controller.php';
 </head>
 
 <body class="<?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : ""; ?>">
-    <p class="h1 text-center my-5">Super RSS Reader</p>
+    <a class="text-decoration-none <?= isset($_COOKIE['mode']) ? $_COOKIE['mode'] : 'text-black'; ?>" href="accueil">
+        <p class="h1 text-center my-5">Super RSS Reader</p>
+    </a>
     <?php include 'views/includes/navbar.php'; ?>
     <div class="container my-5">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
