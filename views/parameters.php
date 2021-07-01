@@ -1,10 +1,11 @@
 <?php
 include 'includes/header.php';
 require '../controllers/index-controller.php';
-require '../controllers/parameters-controller.php';
-if (isset($_POST['mode']) && isset($_POST['numberOfArticles']) && in_array($_POST['mode'], $modeChoices) && in_array($_POST['numberOfArticles'], $articlesNumberChoices)) {
+if (isset($_POST['mode']) && isset($_POST['numberOfArticles']) && isset($_POST['articles']) && in_array($_POST['mode'], $modeChoices) && in_array($_POST['numberOfArticles'], $articlesNumberChoices)) {
+    $articleLsist = implode(" ", $_POST['articles']);
     setcookie('mode', htmlspecialchars(trim($_POST['mode'])), time() + 3600 * 24 *7);
-    setcookie('numberOfArticles', htmlspecialchars(trim($_POST['numberOfArticles'])), time() + 60);
+    setcookie('numberOfArticles', htmlspecialchars(trim($_POST['numberOfArticles'])), time() + 3600 * 24 *7);
+    setcookie('articles', htmlspecialchars(trim($articleLsist)), time() + 3600 * 24 *7);
 }
 
 if (isset($_POST['mode'])) {
@@ -48,7 +49,7 @@ if (isset($_POST['mode'])) {
             foreach ($articlesChoices as $item) {
             ?>
                 <div class="form-check form-check-inline mb-3">
-                    <input class="form-check-input"  name="articles" type="checkbox" id="<?= $item ?>" value="<?= $item ?>">
+                    <input class="form-check-input"  name="articles[]" type="checkbox" id="<?= $item ?>" value="<?= $item ?>">
                     <label class="form-check-label" for="<?= $item ?>"><?= $item ?></label>
                 </div>
             <?php } ?>
