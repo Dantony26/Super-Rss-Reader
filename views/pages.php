@@ -6,7 +6,7 @@ setlocale (LC_TIME, 'fr_FR.utf8','fra');
 
 <div class="container"><?php
 foreach($categories[$_GET['sujet']]->channel->item as $item) {
-    ?><div class="d-flex flex-column flex-md-row justify-content-between border my-3 p-3 row gx-0 fw-bold">
+    ?><div class="d-flex flex-column flex-md-row justify-content-between border rounded changeColor my-3 p-3 row gx-0 fw-bold">
     <div class="col-12 col-md-5 text-vertical-align">
     <img class="img-fluid my-3" src="<?= $item->children('media', true)->content->attributes(); ?>" alt="">
     </div>
